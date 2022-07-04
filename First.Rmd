@@ -1,0 +1,60 @@
+---
+title: "RMarkdown-First"
+author: "Smallmin"
+date: "2022-7-4"
+output: html_document
+---
+#基本快捷使用
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Ctrl+Alt+I直接產生Chunk 或是右上角Chunks → Insert Chunk也可，習慣快捷鍵比較方便。
+```{r}
+print("測試")
+
+```
+
+
+正常情況下輸出seq(5)
+```{r}
+seq(5)
+```
+
+用echo=FALSE可以僅顯示output，不顯示程式碼，如下
+```{r echo = FALSE}
+seq(5)
+```
+
+用results = hide 僅顯示程式碼，不顯示 output如下
+```{r results = "hide"}
+seq(5)
+```
+也可用include=FALSE不顯示程式碼&輸出，通常用於include package可省略使其更美觀。  
+
+不想讓程式碼換行單獨呈現，而是要夾在文字段落中，使用一組單個back tick
+
+就可以做到。適用於單行的程式碼，或是在文字中提到變數名稱時  
+
+能讓讀者一眼就分辨出這是變數的名稱而非段落文字的一部分。  
+
+Ex:我要用`seq()`function 
+
+有時文字會連在一起不會照著排版換行，用2個Enter或是2個Space即可換行。
+
+也可以單一執行其中一個chunk(Ctrl+Alt+c)會直接顯示在console中不用每次都做Knit。
+
+# Markdown 簡易範例
+ 
+Markdown 讓你用 **最簡便的方式**(粗體字) 來編輯 _清楚整齊的文件_(斜體字)。
+
+可以條列文字內容：
+ 
+- 第一點
+- 第二點
+ 
+也可以加上數字來條列
+ 
+1. 第一點
+2. 第二點
+ 
+也可以顯示連結[我的Github](https://github.com/smallmin82465)
