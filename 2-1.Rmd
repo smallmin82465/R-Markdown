@@ -1,0 +1,93 @@
+---
+title: "ch02-1"
+author: "Smallmin"
+date: '2022-07-10'
+output: html_document
+---
+
+
+# Chapter 2
+
+## Random Variables
+
+This chapter introduces the important concept of random variables, which are useful
+in the calculation of probabilities, as well as measures of centrality and variation.
+
+§2.1 —-- Introduction and Definitions
+
+§2.2 —-- Discrete Random Variables
+
+§2.3 —-- Continuous Random Variables
+
+§2.4 —-- Cumulative Distribution Functions
+
+§2.5 —-- Great Expectations
+
+§2.6 —-- Moment Generating Functions
+
+§2.7 —-- Some Probability Inequalities
+
+§2.8 —-- Functions of a Random Variable
+
+§2.9 —-- Exercises
+
+## 2.1 Introduction and Definitions
+
+**Definition**: A **random variable (RV) X** is a function from the sample space to
+the real line, X : Ω → R.
+
+**Example**: Flip two coins. The sample space is Ω = {HH,HT,TH,TT}. Suppose
+X is the RV corresponding to the number of H’s. Then (suppressing the extraneous
+“{·}” notation),
+
+X(TT) = 0, X(HT) = X(TH) = 1, X(HH) = 2.
+
+This results in
+
+P(X = 0) = $\frac{1}{4}$ , P(X = 1) = $\frac{1}{2}$ , P(X = 2) = $\frac{1}{4}$
+
+**Notation**: Capital letters like X,Y,Z,U,V,W usually represent RV’s. Small letters
+like $x,y,z,u,v,w$ usually represent particular values of the RV’s. Thus, you can
+speak of quantities such as P(X = $x$).
+
+**Example**: Let X be the sum of two dice rolls. The sample space is the set of all
+the ways to roll two dice. Then, e.g., (4, 6) is an outcome from the sample space,
+and of course X((4, 6)) = 10. In addition, we can calculate the probability of each
+possible outcome:
+$$
+\mathrm{P}(X=x)=\left\{\begin{array}{cl}
+1 / 36 & \text { if } x=2 \\
+2 / 36 & \text { if } x=3 \\
+\vdots & \\
+6 / 36 & \text { if } x=7 \\
+\vdots & \\
+1 / 36 & \text { if } x=12 \\
+0 & \text { otherwise }
+\end{array}\right.
+$$
+**Example**: Flip a coin.  $$
+X \equiv \begin{cases}0 & \text { if } \mathrm{T} \\ 1 & \text { if } \mathrm{H}\end{cases}
+$$
+**Example**: Roll a die.
+$$
+Y \equiv \begin{cases}0 & \text { if }\{1,2,3\} \\ 1 & \text { if }\{4,5,6\}\end{cases}
+$$
+For all intents and purposes, the RV’s X and Y are the same, since P(X = 0) = P(Y = 0) = $\frac{1}{2}$
+, and P(X = 1) = P(Y = 1) = $\frac{1}{2}$.
+
+**Example**: Select a real number at random between 0 and 1. This experiment has
+an $infinite$ number of “equally likely” outcomes.
+Conclusion: P(we choose the individual point $x$) = P(X = $x$) = 0, believe it or not!
+But note that P(X ≤ 0.65) = 0.65, and P(X ∈ [0.3, 0.7]) = 0.4. In fact, if A is any
+interval in [0,1], then P(X ∈ A) is the length of A.
+
+**Definition**: If the number of possible values of a random variable X is finite or
+countably infinite, then X is a **discrete** random variable. Otherwise,. . .
+A **continuous** random variable is one with probability 0 at every point.
+
+**Example**: Flip a coin — result is H or T. Discrete.
+
+**Example**: Pick a point at random in [0, 1]. Continuous.
+
+**Example**: The amount of time you wait in a line is either 0 (with positive probability)
+or some positive real number — a combined discrete-continuous random variable!
